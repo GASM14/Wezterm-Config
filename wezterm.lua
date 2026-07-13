@@ -55,6 +55,10 @@ table.insert(config.keys, { key = "j", mods = "CTRL", action = move "Down" })
 table.insert(config.keys, { key = "k", mods = "CTRL", action = move "Up" })
 table.insert(config.keys, { key = "l", mods = "CTRL", action = move "Right" })
 
+-- Fechar Janela (ctrl+shift+w)  e Painel (ctrl+w)
+table.insert(config.keys,  { key = "W", mods = "CTRL", action = wezterm.action.CloseCurrentPane })
+table.insert(config.keys,  { key = "W", mods = "CTRL|SHIFT", action = wezterm.action.CloseCurrentTab })
+
 -- ===== Shell padrão =====
 config.default_prog = { "/bin/zsh", "--login" }
 
